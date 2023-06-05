@@ -4,6 +4,8 @@ import 'package:fitness/views/on_boarding/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 
 class StartedView extends StatefulWidget {
+  static const String routeName = '/started-view';
+
   const StartedView({Key? key}) : super(key: key);
 
   @override
@@ -61,10 +63,8 @@ class _StartedViewState extends State<StartedView> {
                   title: "Get Started",
                   onPress: () {
                     if (isChangeColor) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const OnBoardingView()));
+                      Navigator.pushReplacementNamed(
+                          context, OnBoardingView.routeName);
                     } else {
                       setState(() {
                         isChangeColor = true;

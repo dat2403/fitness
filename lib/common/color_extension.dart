@@ -18,6 +18,8 @@ class TColor {
 
   static Color get white => Colors.white;
 
+  static Color get lightGray => const Color(0xffF7F8F8);
+
   //Gradient
   static List<Color> get primaryG => [primaryColor1, primaryColor2];
 

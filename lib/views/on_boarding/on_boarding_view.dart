@@ -1,8 +1,11 @@
 import 'package:fitness/common/color_extension.dart';
 import 'package:fitness/common_widgets/on_boarding_page.dart';
+import 'package:fitness/views/auth/signup_view.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatefulWidget {
+  static const String routeName = '/on-boarding-view';
+
   const OnBoardingView({Key? key}) : super(key: key);
 
   @override
@@ -104,6 +107,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                         pageController.jumpToPage(currentPage);
                       } else {
                         print("Open Welcome Screen");
+                        Navigator.pushReplacementNamed(
+                            context, SignUpView.routeName);
                       }
                     },
                     icon: Icon(

@@ -12,7 +12,7 @@ class RoundButton extends StatelessWidget {
     Key? key,
     required this.title,
     required this.onPress,
-    this.type = RoundButtonType.textGradient,
+    this.type = RoundButtonType.bgGradient,
   }) : super(key: key);
 
   @override
