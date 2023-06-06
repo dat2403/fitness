@@ -1,6 +1,8 @@
 import 'package:fitness/common/color_extension.dart';
 import 'package:fitness/common_widgets/round_button.dart';
 import 'package:fitness/common_widgets/round_textfield.dart';
+import 'package:fitness/views/auth/complete_profile_view.dart';
+import 'package:fitness/views/auth/login_view.dart';
 import 'package:flutter/material.dart';
 
 class SignUpView extends StatefulWidget {
@@ -116,13 +118,11 @@ class _SignUpViewState extends State<SignUpView> {
                     ),
                     Container(
                       margin: const EdgeInsets.only(top: 8),
-                      child: Expanded(
-                        child: Text(
-                          "By continuing you accept ou Privacy Policy and\nTerm of Use",
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: TColor.gray,
-                          ),
+                      child: Text(
+                        "By continuing you accept ou Privacy Policy and\nTerm of Use",
+                        style: TextStyle(
+                          fontSize: 10,
+                          color: TColor.gray,
                         ),
                       ),
                     ),
@@ -131,7 +131,12 @@ class _SignUpViewState extends State<SignUpView> {
                 SizedBox(
                   height: media.height * 0.15,
                 ),
-                RoundButton(title: "Register", onPress: () {}),
+                RoundButton(
+                    title: "Register",
+                    onPress: () {
+                      Navigator.pushNamed(
+                          context, CompleteProfileView.routeName);
+                    }),
                 SizedBox(
                   height: media.height * 0.03,
                 ),
@@ -215,7 +220,9 @@ class _SignUpViewState extends State<SignUpView> {
                   height: media.height * 0.02,
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, LoginView.routeName);
+                  },
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
